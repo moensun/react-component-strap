@@ -7,6 +7,8 @@
  */
 'use strict';
 import React from 'react';
+import { Router, Route, Link, browserHistory } from 'react-router';
+
 
 export default React.createClass({
     render(){
@@ -18,7 +20,10 @@ export default React.createClass({
                 <div className="col-md-4">
                     <ul className="list-group">
                         <li className="list-group-item">
-                            dsdsds
+                            <Link to={`ms-tree-list`}>ms-tree-list</Link>
+                        </li>
+                        <li className="list-group-item">
+                            <Link to={`ms-tree-view`}>ms-tree-view</Link>
                         </li>
                     </ul>
                 </div>

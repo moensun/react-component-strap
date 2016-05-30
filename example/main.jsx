@@ -9,16 +9,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
 
+import Routes from "./route/routes.jsx";
 
-import App from "./app.jsx";
-import NoMatch from "./no-match.jsx";
-
-ReactDom.render((
-    <Router history={browserHistory}>
-        <Route path="/" component={App}>
-            <Route path="*" component={NoMatch}/>
-        </Route>
-    </Router>
-),document.getElementById("app"));
+ReactDom.render(<Routes />,document.getElementById("app"));

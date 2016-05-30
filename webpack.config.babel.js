@@ -28,7 +28,7 @@ let config = {
 
         },
         root: path.join(__dirname, 'example'),
-        extensions: ['', '.js','jsx'],
+        extensions: ['', '.js','.jsx'],
     },
     module:{
         loaders:[
@@ -52,6 +52,14 @@ let config = {
     },
     plugins:[
         new Clean(['html']),
+        new TransferWebpackPlugin([
+             {from: 'data', to: 'data'}
+        ], path.join(__dirname, 'example')),
+        new webpack.ProvidePlugin({
+            _ : 'lodash',
+            $ : 'jquery',
+            jQuery : 'jquery'
+        }),
         new ExtractTextPlugin('[name].bundle.css'),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
         new HtmlWebpackPlugin({
