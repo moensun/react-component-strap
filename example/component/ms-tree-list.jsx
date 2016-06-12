@@ -13,7 +13,7 @@ import {MSTreeList} from "../../src/export";
 
 export default React.createClass({
     getInitialState: function() {
-        return {data: []};
+        return {data: []};                                
     },
     componentDidMount:function () {
         $.ajax({

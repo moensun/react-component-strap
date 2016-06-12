@@ -8,10 +8,12 @@
 'use strict';
 import MSTreeList from "./tree/tree-list.jsx";
 import MSTreeView from "./tree/view/tree-view";
+import ZBTab from "./tab/tab.jsx";
 
 const MoenSunStrap = {
     MSTreeList,
-    MSTreeView
+    MSTreeView,
+    ZBTab
 }
 
 module.exports = MoenSunStrap;

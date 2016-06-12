@@ -11,12 +11,12 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 
 
 import App from "../app.jsx";
-
 import NoMatch from "../no-match.jsx";
 
 
 import MSTreeList from "../component/ms-tree-list";
 import MSTreeView from "../component/ms-tree-view";
+import ZBTab from "../component/zb-tab";
 
 
 export default React.createClass({
@@ -26,6 +26,7 @@ export default React.createClass({
                 <Route path="/" component={App}>
                     <Route path="ms-tree-list" component={MSTreeList}/>
                     <Route path="ms-tree-view" component={MSTreeView}/>
+                    <Route path="zb-tab" component={ZBTab}/>
                     <Route path="*" component={NoMatch}/>
                 </Route>
             </Router>
