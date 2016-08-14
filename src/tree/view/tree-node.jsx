@@ -11,18 +11,34 @@ import React from 'react';
 import TreeView from "./tree-view";
 
 export default React.createClass({
+    getInitialState: function() {
+        return {record: this.props.record || []};
+    },
     render(){
         return (
             <li >
-                {this.props.data.text}
+                <a onClick={this.toggle}>{this.state.record.text}
+                    {
+                        (()=>{
+                            if(this.state.record.children && !this.state.record.expanded){
+                                return <i className="glyphicon glyphicon-menu-right pull-right"></i>
+                            }else if(this.state.record.children && this.state.record.expanded){
+                                return <i className="glyphicon glyphicon-menu-down pull-right"></i>
+                            }
+                        })()
+                    }
+                </a>
                 {
                     (()=>{
-                        if(this.props.data.children){
-                            return <TreeView data={this.props.data.children} />
+                        if(this.state.record.children && this.state.record.expanded ){
+                            return <TreeView data={this.state.record.children} />
                         }
                     })()
                 }
             </li>
         );
+    },
+    toggle(){
+        this.setState({ record:Object.assign(this.state.record,{'expanded':!this.state.record.expanded}) });
     }
 });

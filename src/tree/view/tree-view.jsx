@@ -12,15 +12,15 @@ import TreeNode from "./tree-node";
 
 export default React.createClass({
     getInitialState: function() {
-        return {data: []};
+        return { data: this.props.data || {} };
     },
     render(){
         return (
-            <ul>
+            <ul className="ms-tree-view" >
                 {
                     this.props.data.map(function(row,index){
                         return (
-                            <TreeNode key={index} data={row}></TreeNode>
+                            <TreeNode key={index} record={row}></TreeNode>
                         );
                     })
                 }

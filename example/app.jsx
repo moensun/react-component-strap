@@ -26,6 +26,9 @@ export default React.createClass({
                             <Link to={`ms-tree-view`}>ms-tree-view</Link>
                         </li>
                         <li className="list-group-item">
+                            <Link to={`ms-tree`}>ms-tree</Link>
+                        </li>
+                        <li className="list-group-item">
                             <Link to={`zb-tab`}>zb-tab</Link>
                         </li>
                     </ul>

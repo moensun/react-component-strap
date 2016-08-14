@@ -7,6 +7,7 @@
  */
 'use strict';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../src/sass/style.scss";
 import React from 'react';
 import ReactDom from 'react-dom';
 

@@ -21,17 +21,21 @@
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.17.0",
     "jquery": "^2.2.4",
+    "node-sass": "^3.8.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
+    "sass": "^0.5.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack --watch --progress",
+    "start": "webpack-dev-server --port 9000 --content-base html --watch --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
