@@ -9,6 +9,22 @@
       width: 100%;
       display: block;
       line-height: 40px;
+      text-decoration: none;
     }
   }
+
+  .ms-tree-view{
+    background: #2C3B41;
+    li{
+      a{
+        color: #555d5e;
+        line-height: 30px;
+        background-color: transparent;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+
 }
