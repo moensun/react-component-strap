@@ -14,11 +14,16 @@ export default React.createClass({
     getInitialState: function() {
         return { data: this.props.data || {} };
     },
+    componentWillReceiveProps( nextProps ){
+        this.setState({
+            'data': nextProps.data
+        });
+    },
     render(){
         return (
             <ul className="ms-tree-view" >
                 {
-                    this.props.data.map(function(row,index){
+                    this.state.data.map(function(row,index){
                         return (
                             <TreeNode key={index} record={row}></TreeNode>
                         );

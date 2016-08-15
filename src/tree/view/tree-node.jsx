@@ -39,6 +39,8 @@ export default React.createClass({
         );
     },
     toggle(){
-        this.setState({ record:Object.assign(this.state.record,{'expanded':!this.state.record.expanded}) });
+        this.setState({
+            record:Object.assign(this.state.record,{'expanded':!this.state.record.expanded})
+        });
     }
 });
