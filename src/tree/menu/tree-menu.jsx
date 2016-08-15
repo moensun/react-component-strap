@@ -8,7 +8,7 @@
 'use strict';
 import React from 'react';
 
-import TreeNode from "./tree-node";
+import TreeMenuNode from "./tree-menu-node";
 
 export default React.createClass({
     getInitialState: function() {
@@ -21,11 +21,11 @@ export default React.createClass({
     },
     render(){
         return (
-            <ul className="ms-tree-view" >
+            <ul className="ms-tree-menu" >
                 {
                     this.state.data.map(function(row,index){
                         return (
-                            <TreeNode key={index} record={row}></TreeNode>
+                            <TreeMenuNode key={index} record={row}></TreeMenuNode>
                         );
                     })
                 }

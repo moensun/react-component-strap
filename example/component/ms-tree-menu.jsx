@@ -9,7 +9,7 @@
 
 import React from 'react';
 
-import {MSTreeView} from "../../src/export";
+import {MSTreeMenu} from "../../src/export";
 
 export default React.createClass({
     getInitialState: function() {
@@ -26,7 +26,7 @@ export default React.createClass({
     },
     render(){
         return (
-            <MSTreeView data={this.state.data}></MSTreeView>
+            <MSTreeMenu data={this.state.data}></MSTreeMenu>
         );
     }
 });

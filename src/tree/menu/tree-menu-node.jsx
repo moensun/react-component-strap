@@ -7,22 +7,28 @@
  */
 'use strict';
 import React from 'react';
+import classnames from "classnames";
 
-import TreeView from "./tree-view";
+import TreeMenu from "./tree-menu";
 
 export default React.createClass({
     getInitialState: function() {
         return {record: this.props.record || []};
     },
     render(){
+        let isLeaf = !this.state.record.children;
+        let isExpanded = this.state.record.expanded;
+        let aClassName = classnames({
+            'ms-menu-open':isExpanded
+        });
         return (
             <li >
-                <a onClick={this.toggle}>{this.state.record.text}
+                <a onClick={this.toggle} className={aClassName}>{this.state.record.text}
                     {
                         (()=>{
-                            if(this.state.record.children && !this.state.record.expanded){
+                            if( !isLeaf && !isExpanded){
                                 return <i className="glyphicon glyphicon-menu-right pull-right"></i>
-                            }else if(this.state.record.children && this.state.record.expanded){
+                            }else if( !isLeaf && isExpanded ){
                                 return <i className="glyphicon glyphicon-menu-down pull-right"></i>
                             }
                         })()
@@ -31,7 +37,7 @@ export default React.createClass({
                 {
                     (()=>{
                         if(this.state.record.children && this.state.record.expanded ){
-                            return <TreeView data={this.state.record.children} />
+                            return <TreeMenu data={this.state.record.children} />
                         }
                     })()
                 }

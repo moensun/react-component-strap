@@ -15,7 +15,7 @@ import NoMatch from "../no-match.jsx";
 
 
 import MSTreeList from "../component/ms-tree-list";
-import MSTreeView from "../component/ms-tree-view";
+import MSTreeMenu from "../component/ms-tree-menu";
 import ZBTab from "../component/zb-tab";
 
 
@@ -25,7 +25,7 @@ export default React.createClass({
             <Router>
                 <Route path="/" component={App}>
                     <Route path="ms-tree-list" component={MSTreeList}/>
-                    <Route path="ms-tree-view" component={MSTreeView}/>
+                    <Route path="ms-tree-menu" component={MSTreeMenu}/>
                     <Route path="zb-tab" component={ZBTab}/>
                     <Route path="*" component={NoMatch}/>
                 </Route>
