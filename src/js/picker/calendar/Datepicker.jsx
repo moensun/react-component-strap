@@ -8,21 +8,21 @@
 'use strict';
 import React from "react";
 
+import DateMixin from "./DateMixin";
 import DayPanel from  "./DayPanel";
 
-class DatePicker extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
+export default React.createClass({
+    getInitialState: function() {
+        return {
+            "currentMonth": (new Date()).getMonth(),
+            "currentYear": (new Date()).getFullYear()
+        };
+    },
     render() {
         return (
             <div>
-                <DayPanel/>
+                <DayPanel currentMonth={this.state.currentMonth} currentYear={this.state.currentYear}/>
             </div>
-        );
+        )
     }
-}
-module.exports = DatePicker;
+});

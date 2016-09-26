@@ -8,11 +8,15 @@
 'use strict';
 import React,{Component} from "react";
 
-class Day extends Component {
+export default React.createClass({
+    getInitialState: function() {
+        return {
+            "dayItem": this.props.dayItem
+        };
+    },
     render() {
         return (
-            <button>s</button>
-        );
+            <button><span></span></button>
+        )
     }
-}
-module.exports = Day;
+});
