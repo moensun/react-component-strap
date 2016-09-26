@@ -8,11 +8,13 @@
 'use strict';
 import MSTreeList from "./js/tree/tree-list.jsx";
 import MSTreeMenu from "./js/tree/menu/tree-menu";
+import MSDatepicker from "./js/picker/calendar/Datepicker";
 import ZBTab from "./tab/tab.jsx";
 
 const MoenSunStrap = {
     MSTreeList,
     MSTreeMenu,
+    MSDatepicker,
     ZBTab
 }
 

@@ -28,6 +28,9 @@ export default React.createClass({
                         <li className="list-group-item">
                             <Link to={`zb-tab`}>zb-tab</Link>
                         </li>
+                        <li className="list-group-item">
+                            <Link to={`ms-datepicker`}>ms-datepicker</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
